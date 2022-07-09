@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html  xmlns:th=http://www.thymeleaf.org>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet"   href="css/bootstrap.css">
+
+<link rel="stylesheet"   href="/css/bootstrap.css.map">
+
+<link rel="stylesheet"   href="css/bootstrap.min.css">
+
+<link rel="stylesheet"   href="css/bootstrap.min.css.map">
+<link rel="stylesheet"   href="bootstrap/js/bootstrap.min.js">
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<link rel="stylesheet" href=/css/sidebarStyle.css>
+
+
+</head>
+<body>
+
+<div th:replace="fragment/sidebar::sidebar"></div>
+
+<div class="content" style="margin-left:250px;">
+ 
+   
+    <p> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">View events</button></p><br>
+    <form class="example" action="https://www.w3schools.com/action_page.php" >
+  <input type="text" placeholder="Search.." name="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+    <table class="table table-bordered table-sm">
+      <thead>
+        <tr>
+        <th>Id</th>
+          <th>fullname</th>
+          <th>address</th>
+          <th> root</th>
+           <th>court</th>
+           <th>date</th>
+            <th>time</th>
+           <th>carNumber</th>
+          <th>mistake</th>
+          <th>root</th>
+           <th>Action</th>
+           
+          
+          
+          
+          
+        </tr>
+      </thead>
+      <tbody>
+      <tr th:each="maombi :${listMaombi}">
+        <td th:text="${maombi.Id}"></td>
+         <td th:text="${maombi.fullname}"></td>
+         <td th:text="${maombi.address}"></td>
+         <td th:text="${maombi.root}"></td>
+         <td th:text="${maombi.court}"></td>
+         <td th:text="${maombi.date}"></td>
+          <td th:text="${maombi.time}"></td>
+          <td th:text="${maombi.carNumber}"></td>
+           <td th:text="${maombi.mistake}"></td>
+            <td th:text="${maombi.root}"></td>
+          
+         
+        
+        
+                  <td><a th:href="@{/updateMaombi/{Id}(Id=${maombi.Id})}"  style="margin-left: 30px;"  type="button" class="btn btn-primary">Update</a></button>
+            
+              <td> <a th:href="@{deleteMaombi/{Id}(Id=${maombi.Id})}" class="btn btn-danger" >Delete</a>
+               
+              <!--  onClick="confirm('are tou sure you want delete')" -->
+               
+              </td> 
+              
+       </tr> 
+      </tbody>
+    </table>
+  </div>
+  
+
+</body>
+</html>

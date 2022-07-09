@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th=http://www.thymeleaf.org>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <link rel="stylesheet" type="text/css" href="style.css"/>
+<link rel="stylesheet"   href="bootstrap/fonts/glyphicons-halflings-regular.wolf">
+<link rel="stylesheet"   href="bootstrap/js/jquery-3.2.1.min">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<script src="bootstrap/js/jquery-1.10.2"></script>
+<link rel="stylesheet" href="/css/sidebarStyle.css">
+<link rel="stylesheet" href=/css/sidebarStyle.css>
+</head>
+<body>
+<div id="content">
+        <nav class="navbar navbar-default">
+         
+          </div>     
+        </nav>
+        
+    <div class="container-fluid">
+      <div class="col-lg-12 well">
+        <div class="row">
+          <h1> User List</h1>
+          <input type="text" placeholder="Search.." name="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+          <a th:href = "@{/ShowRegister}" class="btn btn-primary btn-sm mb-3">Add new Staff</a>
+          <table class="table table-striped table-bordered table-responsive-md">
+             <thead class="table-dark">
+                <tr>
+                   <th>userName</th>
+                   <th>password</th>
+                   <th>email</th>
+                   <th>Phone </th>
+                   <th>gender </th>
+                   <th>address</th>
+                   <th>role</th>
+                   <th>Action</th>
+                </tr>
+             </thead>
+             <tbody>
+                <tr th:each="Staff : ${listStaff}">
+                <td th:text="${Staff.userName}"></td>
+                <td th:text="${Staff.password}"></td>
+                <td th:text="${Staff.email}"></td>
+                <td th:text="${Staff.phone}"></td>
+                <td th:text="${Staff.address}"></td>
+                <td th:text="${Staff.role}"></td>
+                <td> <a th:href="@{/DeleteUser/{id}(id=${Id.id})}"class="btn btn-primary">Delete</a></td>
+                <td> <a th:href="@{/showFormForUpdate/{id}(id=${Id.id})}"class="btn btn-primary">Update</a></td>
+
+                
+            
+                </tr>
+             
+             </tbody>
+          </table>
+            </div>   
+
+</body>
+</html>

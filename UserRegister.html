@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th=http://www.thymeleaf.org>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet"   href="css/bootstrap.css">
+
+<link rel="stylesheet"   href="/css/bootstrap.css.map">
+
+<link rel="stylesheet"   href="/css/bootstrap.min.css">
+
+<link rel="stylesheet"   href="/css/bootstrap.min.css.map">
+<link rel="stylesheet"   href="/bootstrap/js/bootstrap.min.js">
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script src="js" type="text/javascript"></script>
+<script src="js/j2.js"></script>
+<script src="js/jquiry.js"></script>
+<link rel="stylesheet" href="/js/jquery-1.10.2.js">
+<link rel="stylesheet" href="/js/jquery-1.10.2.js">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="/css/sidebarStyle.css">
+<link rel="stylesheet" href=/css/sidebarStyle.css>
+
+</head>
+<body>
+    <div class="row" style="margin-top: 50px; margin-bottom:49px;margin-left:345px" >
+
+  
+    
+<form th:action="@{/saveUserRegister}" th:object ="${staff}"  method="post">
+ <div class="panel" >
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">userName</label>
+    <input type="text" class="form-control" id="userName" th:field="*{userName}" aria-describedby="emailHelp">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" th:field="*{password}" id="password">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">address</label>
+    <input type="text" class="form-control" id="address" th:field="*{address}" aria-describedby="emailHelp">
+  </div>
+  
+  
+   <div class="form-group">
+    <label for="exampleInputEmail1">phone-number</label>
+    <input type="text" class="form-control" id="phone" th:field="*{phone}" aria-describedby="emailHelp">
+  </div>
+  
+  
+  <div class="form-group">
+    <label for="email">email</label>
+    <input type="email" class="form-control" th:field="*{email}" id="email">
+     </div>
+    
+  <div class="form-group">
+    <label for="exampleInputEmail1">fullname</label>
+    <input type="text" class="form-control" id="fullname" th:field="*{fullname}" aria-describedby="emailHelp">
+  </div>
+   <label for="root">root</label>
+					  <select class="role" name="root" th:field="*{root}">
+                          <option value="Mkoa-mjini">Mkoa-mjini</option>
+                          <option value="mkoa-Kaskazini">mkoa-Kaskazini</option>
+                          <option value="mkoa-Kaskazini">mkoa-Kusini</option>
+                          <br>
+                          </select>
+                          <br>
+                          <br>
+					  <label for="role">role</label>
+					  <select class="role" name="role" th:field="*{role}">
+                          <option value="Staff">traffic</option>
+                          <option value="Customer">driver</option>
+                          </select>
+                          <br>
+                          
+         <button type="submit"    class="btn btn-primary btn-md" style="margin-left: 150px;">Register</button>
+                          
+                          
+                           
+                          
+                          
+					 
+					
+					
+					</div>
+					</form>
+					</div>
+					
+</body>
+</html>

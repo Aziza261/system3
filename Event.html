@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th=http://www.thymeleaf.org>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"   href="css/bootstrap.css">
+
+<link rel="stylesheet"   href="/css/bootstrap.css.map">
+
+<link rel="stylesheet"   href="css/bootstrap.min.css">
+
+<link rel="stylesheet"   href="css/bootstrap.min.css.map">
+<link rel="stylesheet"   href="bootstrap/js/bootstrap.min.js">
+<link rel="stylesheet" type="text/css" href="style.css"/>
+
+<link rel="stylesheet"   href="bootstrap/js/jquery-1.10.2.js">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/jquiry.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="js/j2.js"></script>
+  <link rel="stylesheet" href="/css/sidebar.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/navbar.css">
+     
+</head>
+<body>
+<div class="Container" style="margin-left:30%;">
+         <form action="#" th:action="@{/saveMaombi}" th:object ="${maombi}"  method="get">
+
+   
+
+			<div class="form-group">
+			
+					  <label for="UserName">fullname</label>
+					  <input style="width:50%;" type="text" class="form-control" id="fullname"  name="fullname" placeholder="Enter fullname">
+					</div>
+					<div class="form-group">
+			
+					  <label for="UserName">carNumber</label>
+					  <input style="width:50%;" type="text" class="form-control" id="carNumber"  name="carNumber" placeholder="EntercarNumber">
+					</div>
+					
+					
+					<div class="form-group">
+					
+					    <label for="root">root</label>
+					  <select class="root" name="root">
+                          <option value="Mkoa-mjini">Mkoa-mjini</option>
+                          <option value="mkoa-Kaskazini">mkoa-Kaskazini</option>
+                          <option value="mkoa-Kaskazini">mkoa-Kusini</option>
+                          </select>
+                          </div>
+                          
+                          
+					<div class="form-group">
+					
+					    <label for="court">court</label>
+					  <select class="court" name="court" >
+                          <option value="Malindi">malindi</option>
+                          <option value="mahonda">mahonda</option>
+                          <option value="mwera">mwera</option>
+                          <option value="makunduchi">makunduchi</option>
+                          </select>
+                          </div>
+					
+					<div class="form-group">
+			
+					  <label for="price">time</label>
+					  <input  style="width:50%;" type="time" class="form-control" id="time"  name="time" placeholder="Enter time">
+					</div>
+					<div class="form-group">
+					  <label for="product">address</label>
+					  <input  style="width:50%;"  type="text" class="form-control" id="address"  name="address" placeholder="Enter address">
+					</div>
+					<div class="form-group">
+					 <label for="phone">date</label>
+					 <input  style="width:50%;"  type="date" class="form-control" id="date"  name="date" placeholder="Enter phone-number">
+					</div>
+					<div class="form-group">
+					<label for="TEXT">mistake</label>
+					<input  style="width:50%;"  type="text" class="form-control" id="mistake"  name="mistake" placeholder="Enter mistake">
+					</div>
+					
+					
+					<button type="submit"    class="btn btn-primary btn-md" style="margin-left: 150px;">Register</button>
+		
+		
+		</form>
+		</div>
+		
+	
+		</body>			
